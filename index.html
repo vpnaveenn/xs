@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>XSS Test</title>
+  <title>Print on Demand Prompt Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>XSS Test</h1>
-  <form id="form">
-    <input type="text" id="input" placeholder="Enter text here">
-    <button type="submit">Submit</button>
+  <h1>Print on Demand Prompt Generator</h1>
+  <form id="prompt-form">
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" placeholder="e.g., a cat, a landscape, a pattern">
+    </div>
+    <div class="form-group">
+      <label for="style">Style:</label>
+      <input type="text" id="style" placeholder="e.g., watercolor, minimalist, art deco">
+    </div>
+    <div class="form-group">
+      <label for="details">Additional Details:</label>
+      <textarea id="details" placeholder="e.g., wearing a hat, with a starry night background, in a vintage style"></textarea>
+    </div>
+    <button type="submit">Generate Prompts</button>
   </form>
-  <div id="output"></div>
+  <div id="prompts-container"></div>
   <script src="script.js"></script>
 </body>
 </html>
